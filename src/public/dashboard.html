@@ -4,38 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Cocreto</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
-    <!-- Navbar -->
-    <nav class="flex justify-between p-4 bg-white shadow-md">
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center p-6 bg-white shadow-md">
         <h1 class="text-2xl font-bold">🚀 Cocreto</h1>
         <div>
-            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Create</a>
-            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Publish</a>
-            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Analyze</a>
-            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Engage</a>
+            <a href="#" class="mx-3 text-gray-700 hover:text-blue-500">Übersicht</a>
+            <a href="#" class="mx-3 text-gray-700 hover:text-blue-500">Planung</a>
+            <a href="#" class="mx-3 text-gray-700 hover:text-blue-500">Analyse</a>
         </div>
-        <button id="logout" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Logout</button>
+        <div>
+            <button id="logoutBtn" class="ml-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Logout</button>
+        </div>
     </nav>
 
-    <!-- Kanban Board -->
-    <div class="flex p-6 space-x-4 overflow-x-auto" id="kanban-board">
-        <!-- Standard-Spalte -->
-        <div class="column w-1/5 bg-white p-4 rounded-lg shadow-md">
-            <input type="text" class="text-lg font-bold border-none focus:outline-none w-full" value="Unnamed">
-            <div class="tasks mt-4 space-y-2"></div>
-            <button class="add-task-btn mt-4 text-blue-500">+ Neue Aufgabe</button>
+    <!-- Dashboard-Übersicht -->
+    <section class="p-6">
+        <h2 class="text-3xl font-bold mb-4">Willkommen im Dashboard, <span id="username">Nutzer</span>!</h2>
+
+        <!-- Kanban Board -->
+        <div class="grid grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Unassigned</h3>
+                <div id="unassignedTasks" class="space-y-2">
+                    <div class="task bg-gray-200 p-2 rounded">Beispiel-Task</div>
+                </div>
+                <button class="mt-2 px-3 py-1 bg-gray-300 rounded text-sm">+ Neue Spalte</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">In Bearbeitung</h3>
+                <div id="inProgressTasks" class="space-y-2"></div>
+                <button class="mt-2 px-3 py-1 bg-gray-300 rounded text-sm">+ Aufgabe hinzufügen</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Fertig</h3>
+                <div id="doneTasks" class="space-y-2"></div>
+                <button class="mt-2 px-3 py-1 bg-gray-300 rounded text-sm">+ Aufgabe hinzufügen</button>
+            </div>
         </div>
+    </section>
 
-        <!-- Button zum Hinzufügen neuer Spalten -->
-        <button id="add-column" class="h-20 w-20 bg-gray-200 rounded-full flex items-center justify-center text-3xl font-bold text-gray-600 hover:bg-gray-300">
-            +
-        </button>
-    </div>
-
-    <script src="js/script.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
 </html>
