@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Cocreto</title>
+    <title>Cocreto - Dashboard</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-gray-100">
-    <nav class="p-4 bg-white shadow-md flex justify-between items-center">
-        <h1 class="text-xl font-bold">Cocreto Dashboard</h1>
-        <button id="logout-btn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Logout</button>
-    </nav>
+<body class="bg-gray-100 p-5">
 
-    <div class="p-6">
-        <h2 class="text-2xl font-bold mb-4">Dein Planer</h2>
-        <button id="add-column" class="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">+ Spalte hinzufügen</button>
-        <div id="board" class="grid grid-cols-3 gap-4"></div>
+    <h1 class="text-3xl font-bold text-center">📅 Dein Social Media Planer</h1>
+    
+    <div class="text-center my-4">
+        <button id="add-column" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            + Neue Spalte hinzufügen
+        </button>
     </div>
 
-    <script src="../js/auth.js"></script>
+    <div id="board" class="flex gap-4 overflow-auto p-4">
+        <!-- Spalten erscheinen hier -->
+    </div>
+
     <script src="../js/dashboard.js"></script>
 </body>
 </html>
