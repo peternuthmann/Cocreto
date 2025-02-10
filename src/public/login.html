@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Cocreto</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/auth.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="flex items-center justify-center h-screen bg-gray-100">
-    <div class="bg-white p-8 rounded-lg shadow-md w-96 text-center">
-        <h2 class="text-2xl font-bold mb-4">Willkommen bei Cocreto</h2>
-        <p class="text-gray-600 mb-4">Bitte melde dich an.</p>
-        
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Benutzername" class="w-full p-2 border rounded mb-2">
-            <input type="password" id="password" placeholder="Passwort" class="w-full p-2 border rounded mb-4">
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
-                Login
-            </button>
+
+    <div class="bg-white p-6 rounded-lg shadow-md w-96 text-center">
+        <h2 class="text-2xl font-bold">Login</h2>
+        <form id="login-form" class="mt-4">
+            <input type="text" id="username" placeholder="Benutzername" class="w-full p-2 border rounded mb-2" required>
+            <input type="password" id="password" placeholder="Passwort" class="w-full p-2 border rounded mb-2" required>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Einloggen</button>
         </form>
-        
-        <p id="error-message" class="text-red-500 mt-2 hidden">Falsche Zugangsdaten!</p>
+        <p class="mt-2 text-sm">
+            Kein Konto? <a href="register.html" class="text-blue-500">Registrieren</a>
+        </p>
     </div>
+
+    <script src="../js/auth.js"></script>
 </body>
 </html>
