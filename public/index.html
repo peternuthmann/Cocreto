@@ -4,71 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocreto - Dein Social Media Planer</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
-    <!-- Navigation -->
+    <!-- 🔹 Navigation -->
     <nav class="flex justify-between items-center p-6 bg-white shadow-md">
         <h1 class="text-2xl font-bold">🚀 Cocreto</h1>
+        
+        <!-- Menü-Links -->
         <div class="relative">
-            <button class="text-gray-700 hover:text-blue-500" onclick="toggleDropdown()">Features ▼</button>
-            <div id="dropdownMenu" class="hidden absolute bg-white shadow-lg rounded-md mt-2 py-2 w-48">
-                <a href="#planer" class="block px-4 py-2 hover:bg-gray-100">Post-Planer</a>
-                <a href="#analyse" class="block px-4 py-2 hover:bg-gray-100">Analyse</a>
-                <a href="#integration" class="block px-4 py-2 hover:bg-gray-100">Plattform-Integration</a>
+            <button id="featuresBtn" class="mx-3 text-gray-700 hover:text-blue-500">
+                Features ⌄
+            </button>
+            <!-- Dropdown Menü -->
+            <div id="featuresDropdown" class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-md hidden">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Planer</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Analyse</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Veröffentlichen</a>
             </div>
         </div>
-        <a href="#preise" class="mx-3 text-gray-700 hover:text-blue-500">Preise</a>
+        
+        <a href="#" class="mx-3 text-gray-700 hover:text-blue-500">Preise</a>
+
         <div>
-            <a href="login.html" class="text-gray-700 hover:text-blue-500">Login</a>
-            <a href="register.html" class="ml-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Registrieren</a>
+            <a href="public/login.html" class="text-gray-700 hover:text-blue-500">Login</a>
+            <a href="public/register.html" class="ml-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                Registrieren
+            </a>
         </div>
     </nav>
 
-    <!-- Hero-Bereich -->
+    <!-- 🔹 Hero-Bereich -->
     <section class="text-center py-16 px-4">
         <h2 class="text-4xl font-bold text-gray-900">Wachse auf Social Media mit Leichtigkeit 📈</h2>
         <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Plane, analysiere und veröffentliche Inhalte mühelos mit unserer Plattform. Für Teams und Einzelpersonen.
+            Plane, analysiere und veröffentliche Inhalte mühelos mit unserer Plattform. Perfekt für Teams & Einzelpersonen.
         </p>
 
         <!-- Call to Action -->
         <div class="mt-6 flex justify-center">
             <input type="email" placeholder="E-Mail-Adresse eingeben" class="px-4 py-2 border rounded-l-lg">
-            <button class="px-6 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600">Jetzt starten</button>
+            <button class="px-6 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600">
+                Jetzt starten
+            </button>
         </div>
+        
+        <!-- Vorteile -->
+        <p class="mt-4 text-gray-500">✅ Kostenlos testen | 🚀 Keine Kreditkarte nötig | ⏳ Jederzeit kündbar</p>
     </section>
 
-    <!-- Features-Bereich -->
-    <section id="planer" class="text-center py-16 px-4 bg-white">
-        <h3 class="text-3xl font-bold text-gray-900">📝 Dein Content-Planer</h3>
-        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Plane deine Social Media Beiträge mit Drag & Drop.</p>
-    </section>
-
-    <section id="analyse" class="text-center py-16 px-4">
-        <h3 class="text-3xl font-bold text-gray-900">📊 Analyse & Tracking</h3>
-        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Sieh dir die Performance deiner Posts an.</p>
-    </section>
-
-    <section id="integration" class="text-center py-16 px-4 bg-white">
-        <h3 class="text-3xl font-bold text-gray-900">🔗 Plattform-Integration</h3>
-        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Verbinde Instagram, TikTok, YouTube & mehr.</p>
-    </section>
-
-    <!-- Preise -->
-    <section id="preise" class="text-center py-16 px-4">
-        <h3 class="text-3xl font-bold text-gray-900">💰 Preise</h3>
-        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Wähle zwischen einer kostenlosen Version oder Premium-Features.</p>
-        <a href="pricing.html" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Preise ansehen</a>
-    </section>
-
-    <!-- Script für Dropdown-Menü -->
+    <!-- 🔹 JavaScript für Dropdown-Menü -->
     <script>
-        function toggleDropdown() {
-            document.getElementById('dropdownMenu').classList.toggle('hidden');
-        }
+        document.getElementById('featuresBtn').addEventListener('click', function() {
+            var dropdown = document.getElementById('featuresDropdown');
+            dropdown.classList.toggle('hidden');
+        });
     </script>
 
 </body>
