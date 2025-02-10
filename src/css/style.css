@@ -1,12 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Eigene Stile */
-.btn {
-    @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600;
-}
-
-.text-gradient {
-    @apply bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text;
-}
