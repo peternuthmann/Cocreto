@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Cocreto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between p-4 bg-white shadow-md">
+        <h1 class="text-2xl font-bold">🚀 Cocreto</h1>
+        <div>
+            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Create</a>
+            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Publish</a>
+            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Analyze</a>
+            <a href="#" class="px-4 text-gray-600 hover:text-blue-500">Engage</a>
+        </div>
+        <button id="logout" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Logout</button>
+    </nav>
+
+    <!-- Kanban Board -->
+    <div class="flex p-6 space-x-4 overflow-x-auto" id="kanban-board">
+        <!-- Standard-Spalte -->
+        <div class="column w-1/5 bg-white p-4 rounded-lg shadow-md">
+            <input type="text" class="text-lg font-bold border-none focus:outline-none w-full" value="Unnamed">
+            <div class="tasks mt-4 space-y-2"></div>
+            <button class="add-task-btn mt-4 text-blue-500">+ Neue Aufgabe</button>
+        </div>
+
+        <!-- Button zum Hinzufügen neuer Spalten -->
+        <button id="add-column" class="h-20 w-20 bg-gray-200 rounded-full flex items-center justify-center text-3xl font-bold text-gray-600 hover:bg-gray-300">
+            +
+        </button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
